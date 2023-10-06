@@ -17,14 +17,14 @@
 
 ##### 1. Create a Role: You define a Role, such as "pod-reader," which allows reading Pods within a specific namespace.
 
-###### apiVersion: rbac.authorization.k8s.io/v1
-###### kind: Role
-###### metadata:
-###### namespace: my-namespace
-###### name: pod-reader
-###### rules:
-###### - apiGroups: [""]
-###### resources: ["pods"]
-###### verbs: ["get", "list"]
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: my-namespace
+  name: pod-reader
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list"]
 
 ##### 2. Create a RoleBinding: You bind the "pod-reader" Role to a user or service account within the same namespace.
