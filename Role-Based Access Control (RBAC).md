@@ -11,3 +11,20 @@
 ### ClusterRoleBindings: ClusterRoleBindings, like RoleBindings, associate ClusterRoles with users, groups, or service accounts, but at the cluster level. They grant permissions that apply across all namespaces in the cluster.
 
 ### Subjects: Subjects in RBAC can be users, groups, or service accounts. They are the entities to which Roles or ClusterRoles are bound to grant access.
+
+
+#### Here's a basic example of how RBAC might be used in Kubernetes:-
+
+##### 1. Create a Role: You define a Role, such as "pod-reader," which allows reading Pods within a specific namespace.
+
+###### apiVersion: rbac.authorization.k8s.io/v1
+###### kind: Role
+###### metadata:
+###### namespace: my-namespace
+###### name: pod-reader
+###### rules:
+###### - apiGroups: [""]
+###### resources: ["pods"]
+###### verbs: ["get", "list"]
+
+##### 2. Create a RoleBinding: You bind the "pod-reader" Role to a user or service account within the same namespace.
