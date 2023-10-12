@@ -47,3 +47,7 @@
 #### 6. Rolling Updates and Rollbacks -
 
 ##### Kubernetes supports rolling updates, so you can change your application without downtime. If something goes wrong, you can quickly roll back.
+
+#### 7. Configurations -
+
+##### You can use ConfigMaps and Secrets to manage configurations and sensitive data securely.
