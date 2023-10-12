@@ -18,7 +18,7 @@
 ###### apiVersion: apps/v1
 ###### kind: Deployment
 ###### metadata:
-######   &nbsp name: my-app
+######   name: my-app
 ###### spec:
 ######   replicas: 3
 ######   selector:
@@ -32,3 +32,7 @@
 ######       containers:
 ######       - name: my-app-container
 ######         image: my-app-image:latest
+
+##### replicas specify how many instances (pods) of your application should run.
+##### selector and template are used to label and define the pod template.
+
