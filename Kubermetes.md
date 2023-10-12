@@ -44,3 +44,6 @@
 
 ##### Kubernetes makes it easy to scale your application up or down based on demand. You can scale your deployment by running: kubectl scale deployment my-app --replicas=5
 
+#### 6. Rolling Updates and Rollbacks -
+
+##### Kubernetes supports rolling updates, so you can change your application without downtime. If something goes wrong, you can quickly roll back.
