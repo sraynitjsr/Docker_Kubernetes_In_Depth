@@ -36,3 +36,6 @@
 ##### replicas specify how many instances (pods) of your application should run.
 ##### selector and template are used to label and define the pod template.
 
+#### 4. Services -
+
+##### In Kubernetes, pods are ephemeral, meaning they can come and go. Services provide a stable endpoint to access your application. For example, a LoadBalancer service exposes your application to the internet.
