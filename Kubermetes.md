@@ -51,3 +51,7 @@
 #### 7. Configurations -
 
 ##### You can use ConfigMaps and Secrets to manage configurations and sensitive data securely.
+
+#### 8. Monitoring and Logging -
+
+##### Kubernetes integrates with various monitoring and logging tools like Prometheus and Grafana to help you track your applications' health and performance.
