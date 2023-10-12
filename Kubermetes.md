@@ -18,7 +18,7 @@
 ###### apiVersion: apps/v1
 ###### kind: Deployment
 ###### metadata:
-######   name: my-app
+######   &nbsp name: my-app
 ###### spec:
 ######   replicas: 3
 ######   selector:
