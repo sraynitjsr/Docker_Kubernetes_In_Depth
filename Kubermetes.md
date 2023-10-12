@@ -11,3 +11,24 @@
 ##### Cluster: A cluster is a collection of nodes managed by Kubernetes.
 ##### Control Plane: The brain of the Kubernetes cluster. It manages the state of the cluster.
 ##### Kubectl: A command-line tool to interact with your Kubernetes cluster.
+
+#### 3. Deployment of Applications -
+
+##### Kubernetes manages applications through Deployments. Here's how you'd create a simple deployment:
+###### apiVersion: apps/v1
+###### kind: Deployment
+###### metadata:
+######   name: my-app
+###### spec:
+######   replicas: 3
+######   selector:
+######     matchLabels:
+######       app: my-app
+######   template:
+######     metadata:
+######       labels:
+######         app: my-app
+######     spec:
+######       containers:
+######       - name: my-app-container
+######         image: my-app-image:latest
