@@ -55,3 +55,5 @@
 #### 8. Monitoring and Logging -
 
 ##### Kubernetes integrates with various monitoring and logging tools like Prometheus and Grafana to help you track your applications' health and performance.
+
+#### Moreover, Helm is a package manager for Kubernetes that makes it easier to define, install, and upgrade even complex applications.
