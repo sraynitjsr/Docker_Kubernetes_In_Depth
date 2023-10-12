@@ -39,3 +39,8 @@
 #### 4. Services -
 
 ##### In Kubernetes, pods are ephemeral, meaning they can come and go. Services provide a stable endpoint to access your application. For example, a LoadBalancer service exposes your application to the internet.
+
+#### 5. Scaling -
+
+##### Kubernetes makes it easy to scale your application up or down based on demand. You can scale your deployment by running: kubectl scale deployment my-app --replicas=5
+
