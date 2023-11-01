@@ -4,16 +4,4 @@
 
 #### Helm allows us to define, package, and distribute Kubernetes applications as "charts," which are collections of pre-configured Kubernetes resources (such as deployments, services, and config maps) that can be easily deployed in a consistent and repeatable manner.
 
-###### "helm create myapp" creates below repo structure
-myapp/
--charts/
--templates/
---NOTES.txt
---helpers.tpl
---deployment.yaml
---hpa.yaml
---ingress.yaml
---service.yaml
--values.yaml
--Chart.yaml
--README.md
+###### "helm create myapp" creates the repo structure as shown in "Folder Structure.png"
