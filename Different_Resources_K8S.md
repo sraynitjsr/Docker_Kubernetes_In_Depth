@@ -26,5 +26,8 @@
 
 ## 13. CustomResourceDefinition (kind: CustomResourceDefinition): CustomResourceDefinitions enable the extension of the Kubernetes API with custom resources. These are often used to define resources for specific applications or controllers.
 
-## These are some of the core resource types in Kubernetes. Kubernetes also supports many other resource types and extensions that allows us to customize and manage applications and infrastructure efficiently.
+## 14. Job (kind: Job): A Job in Kubernetes is used to run a single task or a set of tasks to completion. Once the tasks are completed, the Job is considered finished. Jobs are typically used for tasks that are run once, such as batch processing, data migration, or backups. We can specify the number of completions and parallelism for the tasks in a Job.
 
+## 15. CronJob (kind: CronJob): A CronJob is an extension of the Job resource that allows us to schedule tasks to run at specified times using a cron-like schedule. CronJobs are useful for running recurring tasks, such as periodic data processing, backups, or any operation that needs to occur on a regular schedule. Kubernetes handles the scheduling and execution of these tasks based on the defined schedule.
+
+## These are some of the core resource types in Kubernetes. Kubernetes also supports many other resource types and extensions that allows us to customize and manage applications and infrastructure efficiently.
