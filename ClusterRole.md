@@ -3,3 +3,16 @@
 
 ## A ClusterRole is a collection of rules that specify what actions (verbs) are allowed or denied on which resources.
 ## These resources include objects like pods, services, deployments, and more. Each rule in a ClusterRole defines a set of permissions for a specific API group, resource, and namespace.
+
+## Sample yaml for clusterrole manifest :
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sraynitjsr-cluster-role
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list", "watch", "create", "update", "delete"]
