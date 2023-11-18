@@ -16,3 +16,9 @@
 #### - apiGroups: ["apps"]
 ####   resources: ["deployments"]
 ####   verbs: ["get", "list", "watch", "create", "update", "delete"]
+
+## In this example, the ClusterRole named "example-cluster-role" has two rules.
+
+## The first rule allows "get," "list," and "watch" operations on pods in any namespace.
+
+## The second rule allows a broader set of operations ("get," "list," "watch," "create," "update," "delete") on deployments in the "apps" API group.
