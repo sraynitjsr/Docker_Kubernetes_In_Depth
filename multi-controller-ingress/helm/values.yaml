@@ -1,17 +1,8 @@
-service1:
-  name: service1
-  port: 80
-  tls:
-    enabled: true
-    secretName: service1-tls-secret
-    hosts:
-      - service1.dummy.com
+ingress:
+  host: yourdomain.com
 
-service2:
-  name: service2
+ingressTLS:
+  tlsSecretName: your-tls-secret
+
+service:
   port: 80
-  tls:
-    enabled: true
-    secretName: service2-tls-secret
-    hosts:
-      - service2.dummy.com
