@@ -1,45 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-ingress-service1
-  namespace: default
+  name: {{ .Release.Name }}-ingress
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: {{ .Values.service1.host }}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: {{ .Values.service1.name }}
-                port:
-                  number: {{ .Values.service1.port }}
-  tls:
-    - hosts:
-        - {{ .Values.service1.host }}
-      secretName: {{ .Values.service1.tls.secretName }}
-
----
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: my-ingress-service2
-  namespace: default
-spec:
-  rules:
-    - host: {{ .Values.service2.host }}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: {{ .Values.service2.name }}
-                port:
-                  number: {{ .Values.service2.port }}
-  tls:
-    - hosts:
-        - {{ .Values.service2.host }}
-      secretName: {{ .Values.service2.tls.secretName }}
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-service
+            port:
+              number: {{ .Values.service.port }}
