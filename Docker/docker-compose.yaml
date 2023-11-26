@@ -11,9 +11,9 @@ services:
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: example_root_password
-      MYSQL_DATABASE: example_db
-      MYSQL_USER: example_user
-      MYSQL_PASSWORD: example_password
+      MYSQL_ROOT_PASSWORD: my_root_password
+      MYSQL_DATABASE: my_db
+      MYSQL_USER: my_user
+      MYSQL_PASSWORD: mmy_password
     volumes:
       - ./db_data:/var/lib/mysql
