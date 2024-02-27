@@ -12,3 +12,4 @@ spec:
   - name: init-setup
     image: busybox:latest
     command: ['sh', '-c', 'echo "Initialization complete"']
+
