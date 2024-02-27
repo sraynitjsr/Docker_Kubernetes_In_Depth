@@ -16,4 +16,4 @@ Some common use cases for init containers include:
 
 4. **Resource Initialization**: Init containers can prepare the environment by downloading dependencies, compiling code, or performing any other necessary tasks to ensure that the main application container starts in a ready state.
 
-Init containers offer a way to ensure that the main application container starts in a predictable and consistent environment, which can be crucial for complex applications running in Kubernetes clusters.
+## Init containers offer a way to ensure that the main application container starts in a predictable and consistent environment, which can be crucial for complex applications running in Kubernetes clusters.
