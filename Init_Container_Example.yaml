@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-init-container-example
+spec:
+  containers:
+  - name: main-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  initContainers:
+  - name: init-setup
+    image: busybox:latest
+    command: ['sh', '-c', 'echo "Initialization complete"']
