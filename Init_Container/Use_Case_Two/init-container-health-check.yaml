@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+spec:
+  initContainers:
+  - name: test
+    image: "{{ .Values.image.dummyRegistry | default .Values.global.dummyImageRegistry }}/kubectl:v0.1"
+    command:
+    - sh
+    - -c
+    - |
+      while true; do
+        output=$(kubectl get pods -n my-space --field-selector=status.phase!=Running | grep -v 'main-service-pod' | wc -l)
+        if [ "$output" = "1" ]; then
+          exit 0
+        fi
+        sleep 5
+      done      
+  containers:
+  - name: main-container
+    image: main-container-image
