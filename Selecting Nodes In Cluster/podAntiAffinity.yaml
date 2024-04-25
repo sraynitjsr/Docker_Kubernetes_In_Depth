@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-app-3
+  namespace: my-space
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - worker1
+              topologyKey: kubernetes.io/hostname
+      containers:
+        - name: nginx-container
+          image: nginx:1.21.6
+          ports:
+            - containerPort: 80
