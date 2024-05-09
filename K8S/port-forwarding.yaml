@@ -1,0 +1,8 @@
+## Port Forwarding with kubectl
+
+### Description
+This command is used to establish a network tunnel between our local machine and a pod running in a Kubernetes cluster using `kubectl`.
+
+### Command
+```bash
+kubectl port-forward pod/mypod 8888:5000
