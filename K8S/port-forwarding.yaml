@@ -1,1 +1,10 @@
+# Kubernetes Port Forwarding
+
+Kubernetes port forwarding is a mechanism that allows to access services running inside a Kubernetes cluster from a local machine or another system outside the cluster. It's particularly useful for debugging, accessing databases, or interacting with specific services during development or testing phases without exposing them to the broader network.
+
+## How It Works
+
+1. **Select the Pod**: First we need to identify the Pod that we want to access. Pods are the smallest deployable units in Kubernetes, typically running a single container.
+
+2. **Use the kubectl Command**: Kubernetes provides a command-line tool called `kubectl`, which we can use to interact with our cluster. To set up port forwarding, we use the `kubectl port-forward` command followed by the name of the Pod we want to forward ports to/from.
 
