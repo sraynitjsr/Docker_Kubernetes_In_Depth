@@ -1,0 +1,21 @@
+apiVersion: example.com/v1
+kind: Book
+metadata:
+  name: my-first-book
+  namespace: my-namespace
+spec:
+  title: "The God of Small Things"
+  author: "Arundhati Roy"
+  publicationYear: 1997
+  genre: "Fiction"
+---
+apiVersion: example.com/v1
+kind: Book
+metadata:
+  name: my-second-book
+  namespace: my-namespace
+spec:
+  title: "A Suitable Boy"
+  author: "Vikram Seth"
+  publicationYear: 1993
+  genre: "Fiction"
