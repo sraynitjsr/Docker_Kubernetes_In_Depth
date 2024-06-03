@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-service
+spec:
+  selector:
+    matchLabels:
+      app: my-service
+  template:
+    metadata:
+      labels:
+        app: my-service
+    spec:
+      containers:
+      - name: my-service
+        image: my-service:latest
+        ports:
+        - containerPort: 8080
