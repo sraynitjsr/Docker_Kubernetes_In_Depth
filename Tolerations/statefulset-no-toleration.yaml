@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: my-statefulset-no-toleration
+  namespace: my-namespace
+spec:
+  serviceName: "my-service-no-toleration"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app-no-toleration
+  template:
+    metadata:
+      labels:
+        app: my-app-no-toleration
+    spec:
+      containers:
+      - name: my-container
+        image: nginx
+        ports:
+        - containerPort: 80
+  volumeClaimTemplates:
+  - metadata:
+      name: my-persistent-volume-claim-no-toleration
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
